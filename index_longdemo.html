@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Montessori Mentors International</title>
+	<meta charset="utf-8">
+	<meta name="description" content="International Montessori consultants based on the Central Coast of California.">
+	<meta name="author" content="Maria Caradonna, Anne Young, & Karin Slabaugh">
+	<meta name="keywords" content="Montessori, Mentors, International, Maria Caradonna, Anne Young, Karin Slabaugh, AMI, Guides, Consultants, Children, California">
+    
+	
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> v-->
+	
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+	<script type="text/javascript">
+		  function unhide(divID) {
+		    var item = document.getElementById(divID);
+		    if (item) {
+		      item.className=(item.className=='hidden')?'unhidden':'hidden';
+		    }
+		  }
+	</script>
+	<script type="text/javascript">
+ 
+		$( init );
+		 
+		function init() {
+		  $('#main #page').draggable( {
+			    containment: '#main',
+			    cursor: 'move',
+			  } );
+		  	}
+		 
+	</script>
+	
+	<script src="/js/jquery.ui.touch-punch.min.js"></script>
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<style>
+	
+
+	body {
+		background-color: #ffffff;
+		font-family: 'L10', sans-serif;
+		color: #000;
+		font-size: 1em;
+		text-rendering: optimizeLegibility;
+		font-feature-settings: "kern";
+		font-kerning: normal;
+		-moz-font-feature-settings:"onum" 1, "tnum" 1, "frac" 1, "kern" 1, "liga" 1; 
+		-moz-font-feature-settings:"onum=1, tnum=1, frac=1, kern=1, liga=1"; 
+		-ms-font-feature-settings:"onum" 1, "tnum" 1, "frac" 1, "kern" 1, "liga" 1; 
+		-o-font-feature-settings:"onum" 1, "tnum" 1, "frac" 1, "kern" 1, "liga" 1; 
+		-webkit-font-feature-settings:"onum" 1, "tnum" 1, "frac" 1, "kern" 1, "liga" 1; 
+		font-feature-settings:"onum" 1, "tnum" 1, "frac" 1, "kern" 1, "liga" 1;
+	}
+	
+	body a {
+    	-webkit-transition: 250ms ease-in-out opacity, 250ms ease-in-out color;
+   		transition: 250ms ease-in-out opacity, 250ms ease-in-out color
+	}
+	
+	@font-face {
+  		font-family: 'L10';
+  		src: url('fonts/L10-Regular.eot'); /* IE9 Compat Modes */
+  		src: url('fonts/L10-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       		url('fonts/l10-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       		url('fonts/l10-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       		url('fonts/L10-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       		url('fonts/L10-Regular.ttf#L10') format('svg'); /* Legacy iOS */
+       	font-weight: normal;
+   		font-style: normal;
+	}
+
+
+		::-moz-selection { /* Code for Firefox */
+		    color: white; 
+		    background: transparent;
+		}
+		::selection {
+		    color: white; 
+		    background: transparent;
+		}
+
+	.main {
+		clear: all;
+		width: 100%;
+		height:100vh;
+		min-height: 870px;
+		background: transparent;
+	}
+	
+	#main #page {
+		display: inline-block;
+	}
+	
+	p {
+		text-align: left;
+		color: #000;
+		opacity: 0.5;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+		
+	.logo {
+		display: block;
+		height: 100px;
+		width: 200px;
+		background-image: url("img/montessori_mentors-03.png");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: relative;
+		top: 20px;
+		margin: 0 auto 0 auto;
+	}
+	
+	.logo2 {
+		display: block;
+		height: 100px;
+		width: 200px;
+		background-image: url("img/montessori_mentors-03.png");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		z-index: -999;
+		opacity: 0.25;
+		top: 0; left: 0; right: 0; bottom: 0;
+		margin: auto;
+	}
+	
+	.header {
+		border-bottom: 2px solid #000;
+		text-align: left;
+	}
+	
+	.headerimages {
+		border-bottom: 2px solid #e2c786;
+		color: #e2c786;
+	}
+	
+	.imgbox {
+		display: inline-block;
+		background: transparent;
+		position: relative;
+		text-align: left;
+		height: 456px;
+		width: 348px;
+		padding: 40px 40px 40px 40px;
+		margin: 20px 20px 30px 20px;
+		border-width: 2px 2px 2px 2px;
+		border-style: solid;
+		border-color: #e2c786;
+	}
+	
+	.imgbox img {
+		border-width: 6px 6px 6px 6px;
+		border-style: solid;
+		border-color: #fff;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		margin: auto;
+		display: block;
+    	max-width: 90%;
+    	max-height: 90%;
+    	-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+	}
+	
+	.circleBase {
+    	border-radius: 50%;
+    	behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+	}
+
+	.emailat {
+		position: absolute;
+		top: 12%;
+		right: 14%;
+		text-align: center;
+		line-height: 28px;
+    	width: 32px;
+    	height: 32px;
+    	background: #b0d4ff;
+    	-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+	}
+	
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+	
+	.footermain {
+		text-align: left;
+		color: #000;
+		opacity: 0.1;
+		font-size: 0.8em;
+		position: relative;
+		bottom: 0px;
+		padding-left: 15px;
+		margin: auto;
+		margin-top: 20px;
+		height: 30px;
+		z-index: -1000;
+	}
+	
+	.footercentermain {
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		right: 15px;
+		left: 15px;
+		height: 30px;
+	}
+
+	.footerrightmain {
+		text-align: right;
+		position: absolute;
+		bottom: 0px;
+		right: 15px;
+		left: 15px;
+		height: 30px;
+	}
+	
+	.footercenter {
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.footerright {
+		text-align: right;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+		
+	.about {
+		background: #fff9ed;
+		position: absolute;
+		top: 22px;
+		left: 2%;
+	}
+	
+	.footer1 {
+		text-align: left;
+		color: #fee6c1;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.mission {
+		background: #fcfbf7;
+		position: absolute;
+		top: 170px;
+		left: 2%;
+	}
+	
+	.footer2 {
+		text-align: left;
+		color: #feebcb;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.whatwedo {
+		background: #fffbf3;
+		position: absolute;
+		top: 96px;
+		left: 2%;	
+	}
+
+	.footer3 {
+		text-align: left;
+		color: #f0ebdb;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.contactus {
+		background: #fbfbfb;
+		position: absolute;
+		top: 244px;
+		left: 2%;
+	}
+	
+	.footer4 {
+		text-align: left;
+		color: #ebebeb;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.update {
+		background: #e3f5ff;
+		position: absolute;
+		top: 22px;
+		right: 2%;
+	}
+	
+	.footer5 {
+		text-align: left;
+		color: #a0c4d9;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.report {
+		background: #f0faff;
+		position: absolute;
+		top: 96px;
+		right: 2%;
+	}
+	
+	.footer6 {
+		text-align: left;
+		color: #c5dae0;
+		opacity: 1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+	
+	.notice {
+		background-image: url("img/montessori_mentors_assets-01.png");
+		background-size: 100% 100%;
+		position: absolute;
+		top: 170px;
+		right: 2%;
+		
+	}
+	
+	.footer7 {
+		text-align: left;
+		color: #000;
+		opacity: 0.3;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
+		
+	.color1 {
+		background: #fa9b05;
+		position: absolute;
+		top: 244px;
+		right: 2%;
+	}
+	
+	.color2 {
+		background: #ffae28;
+		position: absolute;
+		top: 318px;
+		right: 2%;
+	}
+	
+	.color3 {
+		background: #b53230;
+		position: absolute;
+		top: 392px;
+		right: 2%;
+	}
+	
+	.color4 {
+		background: #c33c30;
+		position: absolute;
+		top: 466px;
+		right: 2%;
+	}
+	
+	.color5 {
+		background: #0069ff;
+		position: absolute;
+		top: 540px;
+		right: 2%;
+	}
+	
+	.color6 {
+		background: #00ecd8;
+	}
+	
+	.color7 {
+		background: #0eecc0;
+	}
+		
+	.letter {
+		height: 460px;
+		width: 352px;
+		padding: 40px 40px 40px 40px;
+		cursor: move;
+		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.05);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.05);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+	}
+	
+	.letterdarker {
+		height: 460px;
+		width: 352px;
+		padding: 40px 40px 40px 40px;
+		cursor: move;
+		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+	}
+
+	ol {
+		padding-left: 30px;
+		opacity: 0.5;
+		margin-top: 12px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-top: 0px;
+	}
+	
+</style>
+
+</head>
+
+
+<body>
+	<div id="main" class="main">
+		<center><div id="page" class="logo2"></div></center>
+		<div id="page" class="about letter">
+			<span class="header">Who We Are</span><br>
+			<p>Maria Caradonna, Ph.D.<br>
+			Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+			<br><br>
+			Anne Mattila Young<br>
+			AMI 3-6 diploma Mountain View, California<br>
+			Early Childhood Educator/Teacher (Finland)<br>
+			Anne has over 30 years of experience in guiding and building classroom environments as well as supporting families and children from 0 to 6 years old in various settings.
+			<br><br>
+			Karin Slabaugh, Etc.<br>
+			Nam et neque lacinia, suscipit leo ut, suscipit lectus. Aliquam sit amet nisi elit. Etiam convallis, ex eu elementum ullamcorper, massa est facilisis odio, nec efficitur mi odio eget dolor.
+			</p>
+			<div class="footer1">v.1.2016<div class="footercenter">1/7</div></div><!-- <div class="footerright">2016</div> -->
+		</div>
+		<div id="page" class="whatwedo letter">
+			<span class="header">What We Do</span><br>
+			<p>Guiding the transformation of the adult in relation to the child. Providing a Montessori compass for parents, teachers and schools of children ages birth through six years. 
+			<br><br>
+			We work both individually and as a team to model problem-solving, to ask questions and to reflect on specific solutions that will benefit the child, the adults, and the environment.
+			<br><br>
+			We work to foster sustainable changes in:
+			<ol>
+			<li>In-home consultations, including devel-<br>opment of home environments, promoting an understanding of developmental needs, and brainstorming and realizing strategies for intentional parenting</li>
+			<li>Assisting the creation of new classrooms<br>and programs, like Nidos, Young Children’s Communities, and Primary Classes</li>
+			<li>Mentoring teachers and teacher teams
+			</ol>
+			</p>
+			<div class="footer2">v.1.2016<div class="footercenter">2/7</div></div><!-- <div class="footerright">2016</div> -->
+		</div>
+		<div id="page" class="mission letter">
+			<span class="header">Our Mission</span><br>
+			<p>We believe it is important as Montessorians to work as a team, to model problem-solving, to ask questions and to reflect on specific solutions that will benefit the children, the adults and the environment, including the greater school community.
+			<br><br>
+			We believe in the crucial element of cultivating the culture of the school in the minds, attitudes and practices of the guides, and other staff members.  When adults are united in this clear vision, we are building the foundation for Education for Peace.
+			<br><br>
+			We have over 70 years of combined work experience in our own classrooms and in our greater community.
+			<div class="footer3">v.1.2016<div class="footercenter">3/7</div></div>
+		</div>
+		<div id="page" class="contactus letter">
+			<span class="header">Contact Us</span><br>
+			<p>Maria Caradonna, Anne Young, and Karin Slabaugh can be reached via email at hello@montessorimentors.com.
+			<br><br>
+			In addition, the group can be reached by<br>phone at +1 831 555-0239. We are based in Santa Cruz, California.
+			</p>
+			<div class="footer4">v.1.2016<div class="footercenter">4/7</div></div>
+		</div>
+		<div id="page" class="update letter">
+			<span class="header">Update</span><br>
+			<p>Maria Caradonna, Ph.D.<br>
+			Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+			<br><br>
+			Anne Young, Etc.<br>
+			Vestibulum ultricies, lectus eu venenatis hendrerit, nulla tellus suscipit odio, a dignissim sapien purus ac eros. Mauris vehicula, mauris eget hendrerit vulputate, tortor quam lacinia nulla, sit amet congue mauris magna a dui.
+			<br><br>
+			Karin Slabaugh, Etc.<br>
+			Nam et neque lacinia, suscipit leo ut, suscipit lectus. Aliquam sit amet nisi elit. Etiam convallis, ex eu elementum ullamcorper, massa est facilisis odio, nec efficitur mi odio eget dolor.
+			</p>
+			<div class="footer5">v.1.2016<div class="footercenter">6/7</div></div><!-- <div class="footerright">2016</div> -->
+		</div>
+		<div id="page" class="report letter">
+			<span class="header">Report</span><br>
+			<p>Maria Caradonna, Ph.D.<br>
+			Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+			<br><br>
+			Anne Young, Etc.<br>
+			Vestibulum ultricies, lectus eu venenatis hendrerit, nulla tellus suscipit odio, a dignissim sapien purus ac eros. Mauris vehicula, mauris eget hendrerit vulputate, tortor quam lacinia nulla, sit amet congue mauris magna a dui.
+			<br><br>
+			Karin Slabaugh, Etc.<br>
+			Nam et neque lacinia, suscipit leo ut, suscipit lectus. Aliquam sit amet nisi elit. Etiam convallis, ex eu elementum ullamcorper, massa est facilisis odio, nec efficitur mi odio eget dolor.
+			</p>
+			<div class="footer6">v.1.2016<div class="footercenter">5/7</div></div><!-- <div class="footerright">2016</div> -->
+		</div>
+		<div id="page" class="notice letterdarker">
+			<span class="header">Notice</span><br>
+			<p>This August, our group is very excited to be consulting in the Gambia! Still, we wanted to post a notice to explain that we may experience limited access to phone and/or email service while abroad. 
+			<br><br>
+			We hope that our new website will serve as a resource for you in the meantime. While it's still under construction, more content will be added over the course of the summer. Before we leave, please don't hesitate to reach out to us if you have any questions or if you would like any more information about what we do.
+			<br><br>
+			We look forward to hearing from you—either before or after our trip. Thank you for visiting!
+			<br><br>
+			Signed,<br>
+			Maria, Anne, & Karin
+			</p>
+			<!-- <p>We're very excited about the launch of our new website! That being said, we wanted to let you know that this site is still under construction, and that more content will be added over the course of the summer.
+			<br><br>
+			In the meantime, please don't hesitate to reach out to us if you have any questions or if you would like any more information about what we do. We look forward to hearing from you!
+			<br><br>
+			Thank you for visiting!
+			<br><br>
+			Signed,<br>
+			Maria, Anne, & Karin
+			</p> -->
+			<div class="footer7">v.1.2016<div class="footercenter">7/7</div></div>
+		</div>
+		
+		<!-- Added colored pages -->
+		
+		<div id="page" class="color1 letterdarker">
+			<span class="header">Report</span><br>
+			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		</div>
+		<div id="page" class="color2 letterdarker">
+			<span class="header">Report</span><br>
+			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		</div>
+		<div id="page" class="color3 letterdarker">
+			<span class="header">Report</span><br>
+			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		</div>
+		<div id="page" class="color4 letterdarker">
+			<span class="header">Report</span><br>
+			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		</div>
+		<div id="page" class="color5 letterdarker">
+			<span class="header">Report</span><br>
+			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		</div>
+		
+		
+		
+	</div>
+	<div id="footer">
+		<div class="footermain">v.1.2016<div class="footercentermain">&copy; Montessori Mentors International 2016</div><div class="footerrightmain">Page 1 of 1</div></div>
+	</div>
+
+</body>
