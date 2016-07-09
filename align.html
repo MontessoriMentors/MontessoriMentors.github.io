@@ -19,6 +19,8 @@
 
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  	<script src="/packery.pkgd.min.js"></script>
 	
 	<script type="text/javascript">
 		  function unhide(divID) {
@@ -41,11 +43,19 @@
 		 
 	</script>
 
-	<script>
-  $(function() {
-    $( "#main #page" ).draggable({ stack: "#main #page" });
-  });
-  </script>
+	<script type="text/javascript">
+  		$(function() {
+    		$( "#main #page" ).draggable({ stack: "#main #page" });
+  		});
+  	</script>
+
+	<script type="text/javascript">
+$('.main').packery({
+  // options
+  itemSelector: '.letter',
+  gutter: 10
+});
+  	</script>
 	
 	<script src="/js/jquery.ui.touch-punch.min.js"></script>
 
@@ -106,6 +116,7 @@
 		text-align: left;
 		color: #000;
 		font-size: 0.8em;
+		line-height: 1.3;
 		position: relative;
 		top: 0px;
 		padding-left: 15px;
@@ -145,12 +156,20 @@
 		clear: all;
 		width: 100%;
 		height: 100vh;
-		min-height: 1400px;
+		min-height: 2400px;
 		background: transparent;
 	}
+
 	
 	#main #page {
-		display: inline-block;
+		float: left;
+
+	}
+
+	#main:after {
+  	content: '';
+  	display: block;
+  	clear: both;
 	}
 	
 	p {
@@ -299,12 +318,15 @@
 		left: 40px;
 		height: 55px;
 	}
+
+	/* ========================================== */
 		
 	.about {
 		background: #fff9ed;
 		position: absolute;
 		top: 96px;
-		left: 25px;
+		/* left: 498px; */
+		right: 25px;
 	}
 	
 	.footer1 {
@@ -322,8 +344,8 @@
 	.whatwedo {
 		background: #fffbf3;
 		position: absolute;
-		top: 170px;
-		left: 25px;	
+		top: 356px;
+		left: 25px;
 	}
 
 	.footer2 {
@@ -341,8 +363,8 @@
 	.mission {
 		background: #fcfbf7;
 		position: absolute;
-		top: 244px;
-		left: 25px;
+		top: 676px;
+		right: 25px;
 	}
 	
 	.footer3 {
@@ -360,7 +382,7 @@
 	.contactus {
 		background: #fbfbfb;
 		position: absolute;
-		top: 318px;
+		top: 936px;
 		left: 25px;
 	}
 	
@@ -379,8 +401,8 @@
 	.update {
 		background: #e3f5ff;
 		position: absolute;
-		top: 96px;
-		right: 25px;
+		top: 1516px;
+		left: 25px;
 	}
 	
 	.footer5 {
@@ -398,8 +420,9 @@
 	.report {
 		background: #f0faff;
 		position: absolute;
-		top: 170px;
+		top: 1256px;
 		right: 25px;
+
 	}
 	
 	.footer6 {
@@ -418,9 +441,8 @@
 		background-image: url("img/montessori_mentors_assets-01.png");
 		background-size: 100% 100%;
 		position: absolute;
-		top: 244px;
+		top: 1836px;
 		right: 25px;
-		
 	}
 	
 	.footer7 {
@@ -436,10 +458,11 @@
 	}
 
 	.howto {
+		float: left;
 		background: #fff;
 		position: absolute;
-		top: 55px;
-		left: 18%;
+		top: 96px;
+		left: 25px;
 		/* top: calc(50% - 110px);
 		left: calc(50% - 216px); */
 		height: 140px;
@@ -469,6 +492,7 @@
 	}
 		
 	.letter {
+		float: left;
 		height: 460px;
 		width: 352px;
 		padding: 40px 40px 40px 40px;
@@ -479,6 +503,7 @@
 	}
 	
 	.letterdarker {
+		float: left;
 		height: 460px;
 		width: 352px;
 		padding: 40px 40px 40px 40px;
@@ -519,6 +544,12 @@
 	</div>
 	<div id="main" class="main">
 		<center><div id="page" class="logo2"></div></center>
+		<div id="page" class="howto">
+			<span class="header">Navigation Note</span><br>
+			<p>Click or touch and drag sheets of content to uncover information on this site. To reorder the sheets, simply refresh the page.
+			</p>
+			<div class="footerx">v.1.2016<div class="footercenter">x/7</div></div>
+		</div>
 		<div id="page" class="about letter">
 			<span class="header">Who We Are</span><br>
 			<p>Maria Caradonna, Ph.D.<br>
@@ -613,12 +644,6 @@
 			Maria, Anne, & Karin
 			</p> -->
 			<div class="footer7">v.1.2016<div class="footercenter">7/7</div></div>
-		</div>
-		<div id="page" class="howto">
-			<span class="header">Navigation Note</span><br>
-			<p>Click or touch and drag sheets of content to uncover information on this site. To reorder the sheets, simply refresh the page.
-			</p>
-			<div class="footerx">v.1.2016<div class="footercenter">x/7</div></div>
 		</div>
 	</div>
 	<div id="footer">

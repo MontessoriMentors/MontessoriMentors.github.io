@@ -40,10 +40,17 @@
 		  	}
 		 
 	</script>
+
+	<script>
+  $(function() {
+    $( "#main #page" ).draggable({ stack: "#main #page" });
+  });
+  </script>
 	
 	<script src="/js/jquery.ui.touch-punch.min.js"></script>
 
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 	<style>
 	
@@ -83,19 +90,63 @@
 
 
 		::-moz-selection { /* Code for Firefox */
-		    color: white; 
+		    color: #0033cc; 
 		    background: transparent;
 		}
 		::selection {
-		    color: white; 
+		    color: #0033cc; 
 		    background: transparent;
 		}
+
+	.nav {
+		padding-right: 2px;
+	}
+
+	.navmain {
+		text-align: left;
+		color: #000;
+		font-size: 0.8em;
+		line-height: 1.3;
+		position: relative;
+		top: 0px;
+		padding-left: 15px;
+		margin: auto;
+		margin-top: 20px;
+		height: 30px;
+		z-index: 10000;
+	}
+
+	.navmain a {
+		opacity: 0.3;
+	}
+
+	.navmain a:hover {
+		opacity: 1.0;
+	}
+	
+	.navcentermain {
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		right: 15px;
+		left: 15px;
+		height: 30px;
+	}
+
+	.navrightmain {
+		text-align: right;
+		position: absolute;
+		bottom: 0px;
+		right: 15px;
+		left: 15px;
+		height: 30px;
+	}
 
 	.main {
 		clear: all;
 		width: 100%;
-		height:100vh;
-		min-height: 870px;
+		height: 100vh;
+		min-height: 1400px;
 		background: transparent;
 	}
 	
@@ -249,12 +300,14 @@
 		left: 40px;
 		height: 55px;
 	}
+
+	/* ========================================== */
 		
 	.about {
 		background: #fff9ed;
 		position: absolute;
-		top: 22px;
-		left: 2%;
+		top: 96px;
+		left: 6%;
 	}
 	
 	.footer1 {
@@ -268,14 +321,14 @@
 		left: 40px;
 		height: 55px;
 	}
-	
-	.mission {
-		background: #fcfbf7;
+
+	.whatwedo {
+		background: #fffbf3;
 		position: absolute;
-		top: 170px;
-		left: 2%;
+		top: 220px;
+		left: 2%;	
 	}
-	
+
 	.footer2 {
 		text-align: left;
 		color: #feebcb;
@@ -288,13 +341,13 @@
 		height: 55px;
 	}
 	
-	.whatwedo {
-		background: #fffbf3;
+	.mission {
+		background: #fcfbf7;
 		position: absolute;
-		top: 96px;
-		left: 2%;	
+		top: 325px;
+		left: 15%;
 	}
-
+	
 	.footer3 {
 		text-align: left;
 		color: #f0ebdb;
@@ -310,8 +363,8 @@
 	.contactus {
 		background: #fbfbfb;
 		position: absolute;
-		top: 244px;
-		left: 2%;
+		top: 440px;
+		left: 4%;
 	}
 	
 	.footer4 {
@@ -329,8 +382,8 @@
 	.update {
 		background: #e3f5ff;
 		position: absolute;
-		top: 22px;
-		right: 2%;
+		top: 108px;
+		right: 3%;
 	}
 	
 	.footer5 {
@@ -348,8 +401,8 @@
 	.report {
 		background: #f0faff;
 		position: absolute;
-		top: 96px;
-		right: 2%;
+		top: 214px;
+		right: 14%;
 	}
 	
 	.footer6 {
@@ -368,8 +421,8 @@
 		background-image: url("img/montessori_mentors_assets-01.png");
 		background-size: 100% 100%;
 		position: absolute;
-		top: 170px;
-		right: 2%;
+		top: 300px;
+		right: 9%;
 		
 	}
 	
@@ -384,48 +437,38 @@
 		left: 40px;
 		height: 55px;
 	}
+
+	.howto {
+		background: #fff;
+		position: absolute;
+		top: 405px;
+		right: 4.5%;
+		/* top: calc(50% - 110px);
+		left: calc(50% - 216px); */
+		height: 140px;
+		width: 352px;
+		padding: 40px 40px 40px 40px;
+		cursor: move;
+		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		
+	}
+
+	.footerx {
+		text-align: left;
+		color: #000;
+		opacity: 0.1;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+		left: 40px;
+		height: 55px;
+	}
 		
 	.color1 {
-		background: #fa9b05;
-		position: absolute;
-		top: 244px;
-		right: 2%;
-	}
-	
-	.color2 {
-		background: #ffae28;
-		position: absolute;
-		top: 318px;
-		right: 2%;
-	}
-	
-	.color3 {
-		background: #b53230;
-		position: absolute;
-		top: 392px;
-		right: 2%;
-	}
-	
-	.color4 {
-		background: #c33c30;
-		position: absolute;
-		top: 466px;
-		right: 2%;
-	}
-	
-	.color5 {
-		background: #0069ff;
-		position: absolute;
-		top: 540px;
-		right: 2%;
-	}
-	
-	.color6 {
-		background: #00ecd8;
-	}
-	
-	.color7 {
-		background: #0eecc0;
+		background: #0025ff;
 	}
 		
 	.letter {
@@ -433,9 +476,9 @@
 		width: 352px;
 		padding: 40px 40px 40px 40px;
 		cursor: move;
-		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.05);
-		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.05);
-		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
 	}
 	
 	.letterdarker {
@@ -443,9 +486,9 @@
 		width: 352px;
 		padding: 40px 40px 40px 40px;
 		cursor: move;
-		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
-		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
-		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.07);
+		-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
+		box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.08);
 	}
 
 	ol {
@@ -463,6 +506,20 @@
 
 
 <body>
+	<div id="navigation">
+		<div class="navmain">
+			<div>Find:
+			<a href="whoweare.html" class="nav">Who We Are,</a>
+			<a href="whatwedo.html" class="nav">What We Do,</a>
+			<a href="ourmission.html" class="nav">Our Mission,</a>
+			<a href="contactus.html" class="nav">Contact Us</a><br>
+			Pages:
+			<a href="scatter.html" class="nav">Scatter,</a>
+			<a href="align.html" class="nav">Align,</a>
+			<a href="index.html">Stack</a>
+			</div>
+		</div>
+	</div>
 	<div id="main" class="main">
 		<center><div id="page" class="logo2"></div></center>
 		<div id="page" class="about letter">
@@ -560,32 +617,12 @@
 			</p> -->
 			<div class="footer7">v.1.2016<div class="footercenter">7/7</div></div>
 		</div>
-		
-		<!-- Added colored pages -->
-		
-		<div id="page" class="color1 letterdarker">
-			<span class="header">Report</span><br>
-			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
+		<div id="page" class="howto">
+			<span class="header">Navigation Note</span><br>
+			<p>Click or touch and drag sheets of content to uncover information on this site. To reorder the sheets, simply refresh the page.
+			</p>
+			<div class="footerx">v.1.2016<div class="footercenter">x/7</div></div>
 		</div>
-		<div id="page" class="color2 letterdarker">
-			<span class="header">Report</span><br>
-			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
-		</div>
-		<div id="page" class="color3 letterdarker">
-			<span class="header">Report</span><br>
-			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
-		</div>
-		<div id="page" class="color4 letterdarker">
-			<span class="header">Report</span><br>
-			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
-		</div>
-		<div id="page" class="color5 letterdarker">
-			<span class="header">Report</span><br>
-			<p>Donec viverra commodo molestie. Fusce cursus turpis nec nibh fringilla mollis. Vivamus ipsum justo, dictum eget sapien vitae, sodales rutrum massa. Sed quis ullamcorper velit, at hendrerit sapien. Duis vitae pharetra est.
-		</div>
-		
-		
-		
 	</div>
 	<div id="footer">
 		<div class="footermain">v.1.2016<div class="footercentermain">&copy; Montessori Mentors International 2016</div><div class="footerrightmain">Page 1 of 1</div></div>
